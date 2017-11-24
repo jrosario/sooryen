@@ -1,40 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Front-End Test</title>
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
-	<div class="container">
-		<div class="item-list">
-			<div class="item">
-				<h1 class="title">Title 1</h1>
-				<span class="close">x</span>
-				<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id scelerisque lacus, rutrum lobortis nisl. Ut dapibus, quam in auctor pharetra, nibh erat pharetra velit, vitae tristique mauris dui quis.</p>
+	<head>
+		<meta charset="UTF-8">
+		<title>Front-End Test</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<div id="main" class="container">
+			<div id="itemList" class="item-list">
+				<div class="item">
+					<h1 class="title">Title 1</h1>
+					<span class="close">x</span>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id scelerisque lacus, rutrum lobortis nisl. Ut dapibus, quam in auctor pharetra, nibh erat pharetra velit, vitae tristique mauris dui quis.</p>
+				</div>
+				<div class="item">
+					<h1 class="title">Title 2</h1>
+					<span class="close">x</span>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id scelerisque lacus, rutrum lobortis nisl. Ut dapibus, quam in auctor pharetra, nibh erat pharetra velit, vitae tristique mauris dui quis.</p>
+				</div>
+				<div class="item">
+					<h1 class="title">Title 3</h1>
+					<span class="close">x</span>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id scelerisque lacus, rutrum lobortis nisl. Ut dapibus, quam in auctor pharetra, nibh erat pharetra velit, vitae tristique mauris dui quis.</p>
+				</div>
+				<div class="item">
+					<h1 class="title">Title 4</h1>
+					<span class="close">x</span>
+					<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id scelerisque lacus, rutrum lobortis nisl. Ut dapibus, quam in auctor pharetra, nibh erat pharetra velit, vitae tristique mauris dui quis.</p>
+				</div>
 			</div>
-			<div class="item">
-				<h1 class="title">Title 2</h1>
-				<span class="close">x</span>
-				<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id scelerisque lacus, rutrum lobortis nisl. Ut dapibus, quam in auctor pharetra, nibh erat pharetra velit, vitae tristique mauris dui quis.</p>
-			</div>
-			<div class="item">
-				<h1 class="title">Title 3</h1>
-				<span class="close">x</span>
-				<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id scelerisque lacus, rutrum lobortis nisl. Ut dapibus, quam in auctor pharetra, nibh erat pharetra velit, vitae tristique mauris dui quis.</p>
-			</div>
-			<div class="item">
-				<h1 class="title">Title 4</h1>
-				<span class="close">x</span>
-				<p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris id scelerisque lacus, rutrum lobortis nisl. Ut dapibus, quam in auctor pharetra, nibh erat pharetra velit, vitae tristique mauris dui quis.</p>
-			</div>
-		</div>
-		<input type="text" name="newtitle" id="newtitle">
-		<button class="add">Add New</button>
-	</div>	
+			<input type="text" name="newtitle" id="newtitle">
+			<button id="addBtn" class="add">Add New</button>
+			
+		</div>	
 
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-	<script src="main.js"></script>
-
-</body>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.min.js"></script>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script id="entry-template" type="text/x-handlebars-template">
+		  	<div class="item">
+				<h1 class="title">{{title}}</h1>
+				<span class="close">x</span>
+				<p class="description">{{body}}</p>
+			</div>
+		</script>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
 </html>
