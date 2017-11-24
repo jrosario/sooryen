@@ -2,13 +2,11 @@
 	
 $(function() {
 
-
 	var itemList = $('#itemList');
 
 	// 1. Make each item's paragraph collapse/expand when the title is clicked
-	// itemList.on('click', '.item', function(e){
 	itemList.on('click', '.item', function(e){
-		// e.preventDefault();
+		e.preventDefault();
 	    $(this).find('.description').slideToggle();
 
 	 });
